@@ -1,0 +1,231 @@
+/*GLOBAL*/
+body {
+  font-family: Arial, sans-serif;
+  background: #f8f8f8;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  margin: 0;
+}
+
+/* NAVBAR */
+.navbar {
+  background: #4caf50;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1rem;
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.navbar nav a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar nav a:hover {
+  text-decoration: underline;
+}
+
+/* --- MAIN --- */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+section {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* --- SEARCH --- */
+.search-section {
+  width: 90%;
+  text-align: center;
+}
+.search-section input {
+  width: 100%;
+  max-width: 500px;
+  padding: 0.7rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* --- MENU --- */
+.menu-section {
+  flex: 2;
+  min-width: 320px;
+}
+
+.menu-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.menu-card {
+  background: #f0f0f0;
+  border-radius: 10px;
+  text-align: center;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-card img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.menu-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.menu-card p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.menu-card button {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 0.4rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.menu-card button:hover {
+  background: #45a049;
+}
+
+/* --- ORDER & HISTORY & REPORT --- */
+.order-section, .history-section {
+  flex: 1;
+  min-width: 300px;
+}
+
+.order-section ul, .history-section ul {
+  list-style: none;
+  padding: 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.order-section li, .history-section li {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.3rem 0;
+}
+
+.total {
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+button {
+  margin-top: 0.5rem;
+  width: 100%;
+  padding: 0.5rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+#checkoutBtn {
+  background: #2196f3;
+  color: white;
+}
+
+.clear-btn {
+  background: #f44336;
+  color: white;
+}
+
+/* CSS BARU UNTUK KONTROL LAPORAN */
+#reportSection label, 
+#reportSection select, 
+#reportSection input {
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#generateReportBtn {
+  width: 100% !important; 
+  margin-top: 0.5rem;
+}
+
+/* --- FOOTER --- */
+footer {
+  background: #4caf50;
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+  margin-top: 1rem;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* --- CATEGORY --- */
+.category-section {
+  width: 90%;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.category-btn {
+  background: #e0e0e0;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0.2rem;
+  cursor: pointer;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.category-btn.active,
+.category-btn:hover {
+  background: #4caf50;
+  color: white;
+}

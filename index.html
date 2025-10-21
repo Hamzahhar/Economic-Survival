@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mama Bona's Restaurant</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="icon.jpg" alt="Logo Café" />
+      <h1>Mama Bona's Restaurant</h1>
+    </div>
+    <nav>
+      <a href="#menuSection">Menu</a>
+      <a href="#orderSection">Pesanan</a>
+      <a href="#historySection">Riwayat</a>
+      <a href="#reportSection">Laporan</a> </nav>
+  </header>
+
+  <main>
+    <section class="search-section">
+      <input type="text" id="searchInput" placeholder="Cari menu...">
+    </section>
+
+    <section class="category-section">
+      <button class="category-btn active" data-category="all">Semua</button>
+      <button class="category-btn" data-category="Makanan">Makanan</button>
+      <button class="category-btn" data-category="Minuman">Minuman</button>
+    </section>
+
+    <section id="menuSection" class="menu-section">
+      <h2>Daftar Menu</h2>
+      <div id="menuList" class="menu-list"></div>
+    </section>
+
+    <section id="orderSection" class="order-section">
+      <h2>Pesanan</h2>
+      <ul id="orderList"></ul>
+      <div class="total">
+        Total: Rp <span id="totalPrice">0</span>
+      </div>
+      <button id="checkoutBtn">Checkout</button>
+      <button id="clearOrderBtn" class="clear-btn">Hapus Pesanan</button>
+    </section>
+
+    <section id="historySection" class="history-section">
+      <h2>Riwayat Pembelian</h2>
+      <ul id="historyList"></ul>
+    </section>
+    
+    ...
+    <section id="reportSection" class="order-section"> 
+      <h2>Laporan Keuangan</h2><br/>
+      <div>
+        <select id="reportType">
+          <option value="daily">Laporan Harian</option>
+          <option value="monthly">Laporan Bulanan</option>
+        </select>
+        <label for="reportDate">Tanggal/Bulan:</label>
+        <input type="month" id="reportMonth" style="display: none;">
+        <input type="date" id="reportDate">
+        <button id="generateReportBtn">Tampilkan Laporan</button>
+      </div>
+      
+      <div id="reportResult" style="margin-top: 1rem;">
+        <h3>Ringkasan Penjualan</h3>
+        <p>Pendapatan Hari Ini: Rp <span id="revenueToday">0</span></p>
+        <p>Pendapatan Bulan Ini: Rp <span id="revenueThisMonth">0</span></p>
+        
+        <h4 style="margin-top: 15px;">Ringkasan Filter Pilihan:</h4>
+        <p>Total Transaksi: <span id="totalTransactions">0</span></p>
+        <p>Total Pendapatan: Rp <span id="totalRevenue">0</span></p>
+      </div>
+    </section>
+...
+  </main>
+
+  <footer>
+    <p>© 2025 Mama Bona's Restaurant | Thank You</p>
+  </footer>
+
+  <script src="scrift.js"></script>
+</body>
+</html>
